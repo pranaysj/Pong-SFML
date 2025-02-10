@@ -11,7 +11,7 @@ namespace Core {
 
 	void GameWindowManager::CreateGameWindow()
 	{
-		gameWindow->create(VideoMode(gameWidth, gameHeight), gameTitle);
+		gameWindow->create(VideoMode::getDesktopMode(), gameTitle, Style::Fullscreen);
 	}
 
 	RenderWindow* GameWindowManager::GetGameWindow()
@@ -26,7 +26,11 @@ namespace Core {
 
 	void GameWindowManager::Render()
 	{
-		//Draw the shap
+		gameWindow->clear(Color(255,255,255,255));
+
+		//Draw
+
+		gameWindow->display();
 	}
 }
 
