@@ -1,0 +1,242 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "id": "oz-Z9mlpAgEIk0nJEQ6xj",
+      "type": "rectangle",
+      "x": 486.32132212320965,
+      "y": 141.13495805528424,
+      "width": 420.23803710937494,
+      "height": 430.23835500081395,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "groupIds": [
+        "TqHcuXrbBO05v3emscU5j"
+      ],
+      "frameId": null,
+      "index": "a5G",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 387214163,
+      "version": 853,
+      "versionNonce": 351911475,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "Gf_v7Jb_2h_W53Omx3zI6"
+        }
+      ],
+      "updated": 1739206899894,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "Gf_v7Jb_2h_W53Omx3zI6",
+      "type": "text",
+      "x": 591.9804178873698,
+      "y": 146.13495805528424,
+      "width": 208.9198455810547,
+      "height": 25,
+      "angle": 0,
+      "strokeColor": "#e03131",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "groupIds": [
+        "TqHcuXrbBO05v3emscU5j"
+      ],
+      "frameId": null,
+      "index": "a5V",
+      "roundness": null,
+      "seed": 943315837,
+      "version": 875,
+      "versionNonce": 908689363,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1739206899894,
+      "link": null,
+      "locked": false,
+      "text": "GameWindow Manager",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "center",
+      "verticalAlign": "top",
+      "containerId": "oz-Z9mlpAgEIk0nJEQ6xj",
+      "originalText": "GameWindow Manager",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "mBJjITHE315ruTV5cLXwv",
+      "type": "rectangle",
+      "x": 514.4166819254558,
+      "y": 192.8612166510688,
+      "width": 315.7144165039063,
+      "height": 135,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "groupIds": [
+        "TqHcuXrbBO05v3emscU5j"
+      ],
+      "frameId": null,
+      "index": "a5l",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 1120058909,
+      "version": 468,
+      "versionNonce": 1261440371,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "k2bu7SHu_YzabeGnZkvty"
+        }
+      ],
+      "updated": 1739206899894,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "k2bu7SHu_YzabeGnZkvty",
+      "type": "text",
+      "x": 519.4166819254558,
+      "y": 210.3612166510688,
+      "width": 292.519775390625,
+      "height": 100,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "groupIds": [
+        "TqHcuXrbBO05v3emscU5j"
+      ],
+      "frameId": null,
+      "index": "a6",
+      "roundness": null,
+      "seed": 2023559165,
+      "version": 451,
+      "versionNonce": 1196680979,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1739206899894,
+      "link": null,
+      "locked": false,
+      "text": "- int width;\n- int height\n- string gameTitle;\n- RenderWindow* gameWindow;",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "middle",
+      "containerId": "mBJjITHE315ruTV5cLXwv",
+      "originalText": "- int width;\n- int height\n- string gameTitle;\n- RenderWindow* gameWindow;",
+      "autoResize": true,
+      "lineHeight": 1.25
+    },
+    {
+      "id": "mgP-zepupJh95aYZzjdyr",
+      "type": "rectangle",
+      "x": 518.7022272745769,
+      "y": 353.5754614935981,
+      "width": 361.4286422729492,
+      "height": 185,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "groupIds": [
+        "TqHcuXrbBO05v3emscU5j"
+      ],
+      "frameId": null,
+      "index": "a6G",
+      "roundness": {
+        "type": 3
+      },
+      "seed": 1022194589,
+      "version": 311,
+      "versionNonce": 1896582323,
+      "isDeleted": false,
+      "boundElements": [
+        {
+          "type": "text",
+          "id": "f79vHz0WpoxU5nyKnKQSl"
+        }
+      ],
+      "updated": 1739206899894,
+      "link": null,
+      "locked": false
+    },
+    {
+      "id": "f79vHz0WpoxU5nyKnKQSl",
+      "type": "text",
+      "x": 523.7022272745769,
+      "y": 371.0754614935981,
+      "width": 348.0997314453125,
+      "height": 150,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 2,
+      "opacity": 100,
+      "groupIds": [
+        "TqHcuXrbBO05v3emscU5j"
+      ],
+      "frameId": null,
+      "index": "a6V",
+      "roundness": null,
+      "seed": 1976992627,
+      "version": 300,
+      "versionNonce": 2080210515,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1739206899894,
+      "link": null,
+      "locked": false,
+      "text": "- void CreateGameWindow()\n\n+ void Initialize()\n+ RenderWindow* GetGameWindow()\n+ bool IsGameRunning()\n+ void Render()",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "middle",
+      "containerId": "mgP-zepupJh95aYZzjdyr",
+      "originalText": "- void CreateGameWindow()\n\n+ void Initialize()\n+ RenderWindow* GetGameWindow()\n+ bool IsGameRunning()\n+ void Render()",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
