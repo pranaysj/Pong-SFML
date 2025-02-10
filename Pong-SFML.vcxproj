@@ -135,6 +135,19 @@
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="README.md" />
+    <None Include="SFML\place your include and lib folders here" />
+    <None Include="x64\Debug\openal32.dll" />
+    <None Include="x64\Debug\Pong-SFML.exe" />
+    <None Include="x64\Debug\Pong-SFML.pdb" />
+    <None Include="x64\Debug\sfml-audio-d-2.dll" />
+    <None Include="x64\Debug\sfml-graphics-d-2.dll" />
+    <None Include="x64\Debug\sfml-network-d-2.dll" />
+    <None Include="x64\Debug\sfml-system-d-2.dll" />
+    <None Include="x64\Debug\sfml-window-d-2.dll" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
