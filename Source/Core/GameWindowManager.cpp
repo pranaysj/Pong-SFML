@@ -26,7 +26,7 @@ namespace Core {
 
 	void GameWindowManager::Render()
 	{
-		gameWindow->clear(Color(255,255,255,255));
+		gameWindow->clear(Color(0,0,0,255));
 
 		//Draw
 
