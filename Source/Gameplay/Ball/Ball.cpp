@@ -2,6 +2,7 @@
 
 namespace GamePlay
 {
+	
 	Ball::Ball()
 	{
 		LoadTexture();
@@ -22,9 +23,14 @@ namespace GamePlay
 		ballSprite.setPosition(positonX, positionY);
 	}
 
+	void Ball::MoveBall()
+	{
+		ballSprite.move(velocity);
+	}
+
 	void Ball::Update()
 	{
-
+		MoveBall();
 	}
 
 	void Ball::Render(sf::RenderWindow* gameWindow)

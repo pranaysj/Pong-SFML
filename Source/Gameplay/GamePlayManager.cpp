@@ -1,20 +1,28 @@
 #include<../../Header/Gameplay/GamePlayManager.h>
 
 namespace GamePlay {
-	GamePlayManager::GamePlayManager() {
+	
+	GameplayManager::GameplayManager(Events::EventManager* eventManager) {
+
+		this->eventManager = eventManager;
+		Initialize();
+	}
+
+	void GameplayManager::Initialize()
+	{
 		ball = new Ball();
 		paddle1 = new Paddle(paddle1PositionX, paddle1PositionY);
 		paddle2 = new Paddle(paddle2PostionX, paddle2PostionY);
 	}
 
-	void GamePlayManager::Update()
+	void GameplayManager::Update()
 	{
 		ball->Update();
-		paddle1->Update();
-		paddle2->Update();
+		paddle1->Update(eventManager->IsKeyPressed(Keyboard::W), eventManager->IsKeyPressed(Keyboard::S));
+		paddle2->Update(eventManager->IsKeyPressed(Keyboard::Up), eventManager->IsKeyPressed(Keyboard::Down));
 	}
 
-	void GamePlayManager::Render(sf::RenderWindow* gameWindow)
+	void GameplayManager::Render(sf::RenderWindow* gameWindow)
 	{
 		ball->Render(gameWindow);
 		paddle1->Render(gameWindow);

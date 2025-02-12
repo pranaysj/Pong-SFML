@@ -8,7 +8,7 @@ namespace Core {
 	{
 		gameWindowManager = new GameWindowManager();
 		eventManger = new EventManager();
-		gamePlayManager = new GamePlayManager();
+		gamePlayManager = new GameplayManager(eventManger);
 
 		gameWindowManager->Initialize();
 	}
@@ -25,6 +25,7 @@ namespace Core {
 
 	void GameLoop::Update()
 	{
+		gamePlayManager->Update();
 	}
 
 	void GameLoop::Render()

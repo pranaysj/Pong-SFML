@@ -17,6 +17,11 @@ namespace GamePlay {
 		const float positonX = 615.0f;
 		const float positionY = 335.0f;
 
+		float ballSpeed = 0.03f;
+		sf::Vector2f velocity = sf::Vector2f(ballSpeed, ballSpeed);
+
+		void MoveBall();
+
 	public:
 		Ball();
 		void LoadTexture();

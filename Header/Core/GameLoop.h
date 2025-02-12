@@ -8,7 +8,7 @@ namespace Core {
 	private :
 		Core::GameWindowManager* gameWindowManager;
 		Events::EventManager* eventManger;
-		GamePlay::GamePlayManager* gamePlayManager;
+		GamePlay::GameplayManager* gamePlayManager;
 
 	public :
 		void Initialize();
