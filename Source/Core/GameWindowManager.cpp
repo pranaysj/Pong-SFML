@@ -11,7 +11,7 @@ namespace Core {
 
 	void GameWindowManager::CreateGameWindow()
 	{
-		gameWindow->create(VideoMode::getDesktopMode(), gameTitle, Style::Fullscreen);
+		gameWindow->create(VideoMode::getDesktopMode(), gameTitle, Style::Default);
 	}
 
 	RenderWindow* GameWindowManager::GetGameWindow()
