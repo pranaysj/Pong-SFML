@@ -11,7 +11,7 @@ namespace Core {
 
 	void GameWindowManager::CreateGameWindow()
 	{
-		gameWindow->create(VideoMode::getDesktopMode(), gameTitle, Style::Default);
+		gameWindow->create(VideoMode(gameWidth, gameHeight), gameTitle, Style::Default);
 	}
 
 	RenderWindow* GameWindowManager::GetGameWindow()
@@ -26,7 +26,7 @@ namespace Core {
 
 	void GameWindowManager::ClearGameWindow()
 	{
-		gameWindow->clear(Color(0, 0, 0, 255));
+		gameWindow->clear();
 	}
 
 	void GameWindowManager::DisplayGameWindow()

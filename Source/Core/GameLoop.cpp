@@ -1,12 +1,14 @@
 #include "../../Header/Core/GameLoop.h"
 
 using namespace Events;
+using namespace GamePlay;
 
 namespace Core {
 	void GameLoop::Initialize()
 	{
 		gameWindowManager = new GameWindowManager();
 		eventManger = new EventManager();
+		gamePlayManager = new GamePlayManager();
 
 		gameWindowManager->Initialize();
 	}
@@ -28,7 +30,7 @@ namespace Core {
 	void GameLoop::Render()
 	{
 		gameWindowManager->ClearGameWindow();
-		//Draw
+		gamePlayManager->Render(gameWindowManager->GetGameWindow());
 		gameWindowManager->DisplayGameWindow();
 	}
 }

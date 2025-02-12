@@ -8,8 +8,8 @@ namespace Core {
 	class GameWindowManager {
 
 	private:
-		int gameWidth = 150;
-		int gameHeight = 150;
+		int gameWidth = 1280;
+		int gameHeight = 720;
 		std::string gameTitle = "PONG SFML";
 
 		RenderWindow* gameWindow;
