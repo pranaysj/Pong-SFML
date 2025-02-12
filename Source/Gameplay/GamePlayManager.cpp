@@ -19,7 +19,7 @@ namespace GamePlay {
 
 	void GameplayManager::Update()
 	{
-		ball->Update();
+		ball->Update(paddle1, paddle2);
 		paddle1->Update(eventManager->IsKeyPressed(Keyboard::W), eventManager->IsKeyPressed(Keyboard::S));
 		paddle2->Update(eventManager->IsKeyPressed(Keyboard::Up), eventManager->IsKeyPressed(Keyboard::Down));
 	}

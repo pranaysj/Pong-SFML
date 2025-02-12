@@ -1,5 +1,5 @@
 #include <../../Header/Gameplay/Ball/Ball.h>
-
+#include<iostream>
 namespace GamePlay
 {
 	
@@ -8,6 +8,7 @@ namespace GamePlay
 		LoadTexture();
 		InitializeVariable();
 	}
+
 
 	void Ball::LoadTexture()
 	{
@@ -21,6 +22,8 @@ namespace GamePlay
 		ballSprite.setTexture(ballTexture);
 		ballSprite.setScale(scaleX, scaleY);
 		ballSprite.setPosition(positonX, positionY);
+
+		velocity = sf::Vector2f(ballSpeed, ballSpeed);
 	}
 
 	void Ball::MoveBall()
@@ -28,9 +31,65 @@ namespace GamePlay
 		ballSprite.move(velocity);
 	}
 
-	void Ball::Update()
+	void Ball::OnCollision(Paddle* player1, Paddle* player2)
+	{
+		HandleBoundaryCollision();
+		HandlePaddleCollision(player1, player2);
+		HandleOutofBoundCollision();
+	}
+
+	void Ball::HandlePaddleCollision(Paddle* player1, Paddle* player2)
+	{
+		const sf::RectangleShape& player1Sprite = player1->GetPaddleSprite();
+		const sf::RectangleShape& player2Sprite = player2->GetPaddleSprite();
+
+		sf::FloatRect ballBound = ballSprite.getGlobalBounds();
+		sf::FloatRect player1Bound = player1Sprite.getGlobalBounds();
+		sf::FloatRect player2Bound = player2Sprite.getGlobalBounds();
+
+		if (ballBound.intersects(player1Bound) && velocity.x < 0) {
+			velocity.x = -velocity.x;
+		}
+		if (ballBound.intersects(player2Bound) && velocity.x > 0) {
+			velocity.x = -velocity.x;
+		}
+	}
+
+	void Ball::HandleBoundaryCollision()
+	{
+		sf::FloatRect ballBound = ballSprite.getGlobalBounds();
+
+		if ((ballBound.top <= topBoundary && velocity.y < 0) ||
+			(ballBound.top + ballBound.height >= bottomBoundary && velocity.y > 0)) {
+			velocity.y = -velocity.y;
+		}
+	}
+
+	void Ball::HandleOutofBoundCollision()
+	{
+		sf::FloatRect ballBound = ballSprite.getGlobalBounds();
+
+		if (ballBound.left <= leftBoundary)
+		{
+			Reset();
+		}
+		else if (ballBound.left + ballBound.width >= rightBoundary)
+		{
+			Reset();
+		}
+	}
+
+
+	void Ball::Reset()
+	{
+		ballSprite.setPosition(centerPositionX, centerPositionY);
+		velocity = sf::Vector2f(ballSpeed, ballSpeed);
+	}
+
+	void Ball::Update(Paddle* player1, Paddle* player2)
 	{
 		MoveBall();
+		OnCollision(player1, player2);
 	}
 
 	void Ball::Render(sf::RenderWindow* gameWindow)
