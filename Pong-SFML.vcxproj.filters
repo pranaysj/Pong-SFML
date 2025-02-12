@@ -45,6 +45,9 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Core\GameLoop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Core\GameWindowManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -66,6 +69,9 @@
     <None Include="x64\Debug\sfml-window-d-2.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Header\Core\GameLoop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Header\Core\GameWindowManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>

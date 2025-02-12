@@ -1,17 +1,16 @@
-#include <../../Header/Core/GameWindowManager.h>
-#include <../../Header/Event/EventManager.h>
+#include <../../Header/Core/GameLoop.h>
 
 int main()
 {
-	Core::GameWindowManager gameWindowManager;
-	Events::EventManager eventManager;
+	Core::GameLoop* gameLoop = new Core::GameLoop();
 
-    gameWindowManager.Initialize();
+    gameLoop->Initialize();
 
-	while (gameWindowManager.IsGameRunning())
+	while (gameLoop->IsGameRunning())
 	{
-		eventManager.PollEvent(gameWindowManager.GetGameWindow());
-		gameWindowManager.Render();
+		gameLoop->PollEvent();
+		gameLoop->Update();
+		gameLoop->Render();
 	}
 
 	return 0;

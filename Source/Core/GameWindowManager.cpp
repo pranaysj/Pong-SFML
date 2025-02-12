@@ -24,12 +24,13 @@ namespace Core {
 		return gameWindow->isOpen();
 	}
 
-	void GameWindowManager::Render()
+	void GameWindowManager::ClearGameWindow()
 	{
-		gameWindow->clear(Color(0,0,0,255));
+		gameWindow->clear(Color(0, 0, 0, 255));
+	}
 
-		//Draw
-
+	void GameWindowManager::DisplayGameWindow()
+	{
 		gameWindow->display();
 	}
 }
