@@ -1,6 +1,7 @@
 #pragma once
 #include<../../Header/Gameplay/Ball/Ball.h>
 #include<../../Header/Gameplay/Paddle/Paddle.h>
+#include<../../Header/Gameplay/Boundary/Boundary.h>
 #include <../../Header/Event/EventManager.h>
 
 namespace GamePlay {
@@ -18,8 +19,10 @@ namespace GamePlay {
 		Ball* ball;
 		Paddle* paddle1;
 		Paddle* paddle2;
+		Gameplay::Boundary* boundary;
 
 		void Initialize();
+
 	public :
 		GameplayManager(Events::EventManager* eventManager);
 		void Update();

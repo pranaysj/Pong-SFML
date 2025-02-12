@@ -13,6 +13,8 @@ namespace GamePlay {
 		ball = new Ball();
 		paddle1 = new Paddle(paddle1PositionX, paddle1PositionY);
 		paddle2 = new Paddle(paddle2PostionX, paddle2PostionY);
+		boundary = new Gameplay::Boundary(); //WHY?
+		
 	}
 
 	void GameplayManager::Update()
@@ -24,6 +26,7 @@ namespace GamePlay {
 
 	void GameplayManager::Render(sf::RenderWindow* gameWindow)
 	{
+		boundary->Render(gameWindow);
 		ball->Render(gameWindow);
 		paddle1->Render(gameWindow);
 		paddle2->Render(gameWindow);
