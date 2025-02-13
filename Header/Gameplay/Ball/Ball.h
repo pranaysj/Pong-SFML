@@ -4,6 +4,11 @@
 #include <string>
 
 namespace GamePlay {
+	enum class BallState {
+		Idle,
+		Moving
+	};
+
 	class Ball {
 	private:
 
@@ -15,11 +20,12 @@ namespace GamePlay {
 		const float scaleX = 0.03f;
 		const float scaleY = 0.03f;
 
-		const float positonX = 615.0f;
+		const float positonX = 625.0f;
 		const float positionY = 335.0f;
 
-		float ballSpeed = 0.06f;
+		float ballSpeed = 10.0f;
 		sf::Vector2f velocity;
+		float speedMultiplier = 20.0f;
 
 		const float topBoundary = 20.0f;
 		const float bottomBoundary = 700.0f;
@@ -29,9 +35,16 @@ namespace GamePlay {
 		const float centerPositionX = 615.0f;
 		const float centerPositionY = 325.0f;
 
+		float delayDuration = 2.0f;
+		float elapsedDelayTime = 0.0f;
+
+		BallState currentState;
+
+		void UpdateDelayTime(float deltaTime);
+
 		void LoadTexture();
 		void InitializeVariable();
-		void MoveBall();
+		void MoveBall(Utility::TimeService* timeServices);
 		void Reset();
 
 	public:
@@ -42,7 +55,7 @@ namespace GamePlay {
 		void HandleOutofBoundCollision();
 
 		void OnCollision(Paddle* player1, Paddle* player2);
-		void Update(Paddle* player1, Paddle* player2);
+		void Update(Paddle* player1, Paddle* player2, Utility::TimeService* timeServices);
 		void Render(sf::RenderWindow* gameWindow);
 	};
 }

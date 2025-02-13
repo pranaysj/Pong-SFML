@@ -23,19 +23,19 @@ namespace GamePlay
 		paddleSprite.setSize(sf::Vector2f(paddleWidth, paddleHeight));
 	}
 
-	void Paddle::MovePaddle(bool moveUpKeyPressed, bool moveDownKeyPressed)
+	void Paddle::MovePaddle(bool moveUpKeyPressed, bool moveDownKeyPressed, Utility::TimeService* timeServices)
 	{
 		if (moveUpKeyPressed && GetPaddleSprite().getPosition().y > topBoundary) {
-			paddleSprite.move(0, -paddleSpeed);
+			paddleSprite.move(0, -paddleSpeed * timeServices->GetDeltaTime() * speedMultiplier) ;
 		}
 		else if (moveDownKeyPressed && GetPaddleSprite().getPosition().y + GetPaddleSprite().getSize().y < bottomBoundary) {
-			paddleSprite.move(0, paddleSpeed);
+			paddleSprite.move(0, paddleSpeed * timeServices->GetDeltaTime() * speedMultiplier);
 		}
 	}
 
-	void Paddle::Update(bool moveUpKeyPressed, bool moveDownKeyPressed)
+	void Paddle::Update(bool moveUpKeyPressed, bool moveDownKeyPressed, Utility::TimeService* timeServices)
 	{
-		MovePaddle(moveUpKeyPressed, moveDownKeyPressed);
+		MovePaddle(moveUpKeyPressed, moveDownKeyPressed, timeServices);
 	}
 
 	void Paddle::Render(sf::RenderWindow* gameWindow)

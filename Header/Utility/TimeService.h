@@ -6,14 +6,15 @@ namespace Utility {
 	private :
 		std::chrono::steady_clock::time_point previousTime;
 		float deltaTime;
+		float microsecond = 0.000001;
 
-		void CalculateDeltaTime();
+		float CalculateDeltaTime();
 		void UpdateDeltaTime();
 		void UpdatePreviousTime();
 
 	public:
 		void Initialize();
 		void Update();
-		void GetDeltaTime();
+		float GetDeltaTime();
 	};
 }

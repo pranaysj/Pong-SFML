@@ -3,12 +3,14 @@
 #include<../../Header/Gameplay/Paddle/Paddle.h>
 #include<../../Header/Gameplay/Boundary/Boundary.h>
 #include <../../Header/Event/EventManager.h>
+#include <../../Header//Utility/TimeService.h>
 
 namespace GamePlay {
 	class GameplayManager {
 	private :
 
 		Events::EventManager* eventManager;
+		Utility::TimeService* timeService;
 
 		float paddle1PositionX = 40.0f;
 		float paddle1PositionY = 300.0f;

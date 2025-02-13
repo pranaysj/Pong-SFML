@@ -19,6 +19,8 @@ namespace GamePlay
 
 	void Ball::InitializeVariable()
 	{
+		currentState = BallState::Idle;
+
 		ballSprite.setTexture(ballTexture);
 		ballSprite.setScale(scaleX, scaleY);
 		ballSprite.setPosition(positonX, positionY);
@@ -26,9 +28,25 @@ namespace GamePlay
 		velocity = sf::Vector2f(ballSpeed, ballSpeed);
 	}
 
-	void Ball::MoveBall()
+	void Ball::MoveBall(Utility::TimeService* timeServices)
 	{
-		ballSprite.move(velocity);
+		UpdateDelayTime(timeServices->GetDeltaTime());
+		if (currentState == BallState::Moving) {
+			ballSprite.move(velocity * timeServices->GetDeltaTime() * speedMultiplier);
+		}
+	}
+
+	void Ball::UpdateDelayTime(float deltaTime)
+	{
+		if (currentState == BallState::Idle) {
+			elapsedDelayTime += deltaTime;
+			if (elapsedDelayTime >= delayDuration) {
+				currentState = BallState::Moving;
+			}
+			else {
+				return;
+			}
+		}
 	}
 
 	void Ball::OnCollision(Paddle* player1, Paddle* player2)
@@ -84,11 +102,13 @@ namespace GamePlay
 	{
 		ballSprite.setPosition(centerPositionX, centerPositionY);
 		velocity = sf::Vector2f(ballSpeed, ballSpeed);
+		currentState == BallState::Idle;
+		elapsedDelayTime = 0.0f;
 	}
 
-	void Ball::Update(Paddle* player1, Paddle* player2)
+	void Ball::Update(Paddle* player1, Paddle* player2, Utility::TimeService* timeServices)
 	{
-		MoveBall();
+		MoveBall(timeServices);
 		OnCollision(player1, player2);
 	}
 
