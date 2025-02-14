@@ -2,6 +2,7 @@
 
 using namespace Events;
 using namespace GamePlay;
+using namespace Sounds;
 
 namespace Core {
 	void GameLoop::Initialize()
@@ -9,6 +10,7 @@ namespace Core {
 		gameWindowManager = new GameWindowManager();
 		eventManger = new EventManager();
 		gamePlayManager = new GameplayManager(eventManger);
+		soundManager = new SoundManager();
 
 		gameWindowManager->Initialize();
 	}

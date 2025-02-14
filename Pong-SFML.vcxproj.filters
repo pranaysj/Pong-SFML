@@ -72,6 +72,9 @@
     <ClCompile Include="Source\UI\UIService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Sound\SoundManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
@@ -114,6 +117,9 @@
     <ClInclude Include="Header\UI\UIService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Header\Sound\SoundManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Textures\Ball.png">
@@ -129,5 +135,11 @@
   <ItemGroup>
     <Font Include="Assets\Fonts\Aloevera-OVoWO.ttf" />
     <Font Include="Assets\Fonts\AmberyGardenRegular-PKjGd.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\Sounds\Ball_Bounce.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+    <Media Include="Assets\Sounds\Pong_BGM.mp3" />
   </ItemGroup>
 </Project>

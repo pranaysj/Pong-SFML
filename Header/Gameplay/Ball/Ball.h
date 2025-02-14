@@ -1,7 +1,8 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include<../../Header/Gameplay/Paddle/Paddle.h>
-#include <string>
+#include<../../Header/Sound/SoundManager.h>
+
 
 namespace GamePlay {
 	enum class BallState {

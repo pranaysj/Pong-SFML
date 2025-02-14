@@ -67,9 +67,11 @@ namespace GamePlay
 
 		if (ballBound.intersects(player1Bound) && velocity.x < 0) {
 			velocity.x = -velocity.x;
+			Sounds::SoundManager::PlaySoundEffect(Sounds::SoundType::BALL_BOUNCE);
 		}
 		if (ballBound.intersects(player2Bound) && velocity.x > 0) {
 			velocity.x = -velocity.x;
+			Sounds::SoundManager::PlaySoundEffect(Sounds::SoundType::BALL_BOUNCE);
 		}
 	}
 
@@ -80,6 +82,7 @@ namespace GamePlay
 		if ((ballBound.top <= topBoundary && velocity.y < 0) ||
 			(ballBound.top + ballBound.height >= bottomBoundary && velocity.y > 0)) {
 			velocity.y = -velocity.y;
+			Sounds::SoundManager::PlaySoundEffect(Sounds::SoundType::BALL_BOUNCE);
 		}
 	}
 
@@ -90,11 +93,13 @@ namespace GamePlay
 		if (ballBound.left <= leftBoundary)
 		{
 			UpdateLeftCollsionState(true);
+			Sounds::SoundManager::PlaySoundEffect(Sounds::SoundType::BALL_BOUNCE);
 			Reset();
 		}
 		else if (ballBound.left + ballBound.width >= rightBoundary)
 		{
 			UpdateRightCollsionState(true);
+			Sounds::SoundManager::PlaySoundEffect(Sounds::SoundType::BALL_BOUNCE);
 			Reset();
 		}
 	}
@@ -118,7 +123,6 @@ namespace GamePlay
 	{
 		hadRightCollison = value;
 	}
-
 
 	void Ball::Reset()
 	{
