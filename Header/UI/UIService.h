@@ -27,9 +27,14 @@ namespace UI {
 		void LoadFontTexture();
 		void CreateLeftScoreText();
 		void CreateRightScoreText();
+		std::string FromatScore(int score);
 
 	public:
 		UIService();
+		void IncrementPlayer1Score();
+		void IncrementPlayer2Score();
+
+
 		void Update();
 		void Render(sf::RenderWindow* gameWindow);
 	};
