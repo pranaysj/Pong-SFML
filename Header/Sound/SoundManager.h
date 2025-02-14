@@ -8,10 +8,14 @@ namespace Sounds {
 
 	class SoundManager {
 	private:
-		static sf::SoundBuffer ballBounce;
+
 		static sf::Sound soundEffect;
+		static sf::SoundBuffer ballBounce;
+		static sf::Music backgroundMusic;
 
 		static const std::string ballBouncePath;
+		static const std::string bgmPath;
+		static float backgroundMusicVolume;
 
 		void Initialize();
 		static void LoadSoundFromFile();
@@ -21,5 +25,6 @@ namespace Sounds {
 		~SoundManager();
 
 		static void PlaySoundEffect(SoundType soundType);
+		static void PlayBackgroundMusic();
 	};
 }
