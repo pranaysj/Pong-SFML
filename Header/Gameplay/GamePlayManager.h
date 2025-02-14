@@ -3,7 +3,8 @@
 #include<../../Header/Gameplay/Paddle/Paddle.h>
 #include<../../Header/Gameplay/Boundary/Boundary.h>
 #include <../../Header/Event/EventManager.h>
-#include <../../Header//Utility/TimeService.h>
+#include <../../Header/Utility/TimeService.h>
+#include <../../Header/UI/UIService.h>
 
 namespace GamePlay {
 	class GameplayManager {
@@ -11,6 +12,7 @@ namespace GamePlay {
 
 		Events::EventManager* eventManager;
 		Utility::TimeService* timeService;
+		UI::UIService* uiService;
 
 		float paddle1PositionX = 40.0f;
 		float paddle1PositionY = 300.0f;

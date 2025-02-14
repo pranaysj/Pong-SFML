@@ -12,6 +12,7 @@ namespace GamePlay {
 	{
 		timeService = new Utility::TimeService();
 		timeService->Initialize();
+		uiService = new UI::UIService();
 
 		ball = new Ball();
 		paddle1 = new Paddle(paddle1PositionX, paddle1PositionY);
@@ -35,5 +36,6 @@ namespace GamePlay {
 		ball->Render(gameWindow);
 		paddle1->Render(gameWindow);
 		paddle2->Render(gameWindow);
+		uiService->Render(gameWindow);
 	}
 }

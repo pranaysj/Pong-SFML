@@ -25,7 +25,7 @@ namespace GamePlay {
 
 		float ballSpeed = 10.0f;
 		sf::Vector2f velocity;
-		float speedMultiplier = 20.0f;
+		float speedMultiplier = 40.0f;
 
 		const float topBoundary = 20.0f;
 		const float bottomBoundary = 700.0f;
