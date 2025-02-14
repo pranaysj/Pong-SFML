@@ -8,6 +8,27 @@ namespace GamePlay {
 		Initialize();
 	}
 
+	void GameplayManager::UpdateScore()
+	{
+		if (ball->IsLeftCollsionOccured()) {
+			uiService->IncrementPlayer2Score();
+			ball->UpdateLeftCollsionState(false);
+			ResetPlayer();
+		}
+
+		if (ball->IsRightCollsionOccured()) {
+			uiService->IncrementPlayer1Score();
+			ball->UpdateRightCollsionState(false);
+			ResetPlayer();
+		}
+	}
+
+	void GameplayManager::ResetPlayer()
+	{
+		paddle1->Reset(paddle1PositionX, paddle1PositionY);
+		paddle2->Reset(paddle2PostionX, paddle2PostionY);
+	}
+
 	void GameplayManager::Initialize()
 	{
 		timeService = new Utility::TimeService();
@@ -28,6 +49,9 @@ namespace GamePlay {
 		ball->Update(paddle1, paddle2, timeService);
 		paddle1->Update(eventManager->IsKeyPressed(Keyboard::W), eventManager->IsKeyPressed(Keyboard::S), timeService);
 		paddle2->Update(eventManager->IsKeyPressed(Keyboard::Up), eventManager->IsKeyPressed(Keyboard::Down), timeService);
+
+		UpdateScore();
+		uiService->Update();
 	}
 
 	void GameplayManager::Render(sf::RenderWindow* gameWindow)

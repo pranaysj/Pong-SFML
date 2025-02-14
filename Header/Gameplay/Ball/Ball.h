@@ -38,6 +38,9 @@ namespace GamePlay {
 		float delayDuration = 2.0f;
 		float elapsedDelayTime = 0.0f;
 
+		bool hadLeftCollison = false;
+		bool hadRightCollison = false;
+
 		BallState currentState;
 
 		void UpdateDelayTime(float deltaTime);
@@ -53,6 +56,12 @@ namespace GamePlay {
 		void HandlePaddleCollision(Paddle* player1, Paddle* player2);
 		void HandleBoundaryCollision();
 		void HandleOutofBoundCollision();
+
+		bool IsLeftCollsionOccured();
+		void UpdateLeftCollsionState(bool value);
+		
+		bool IsRightCollsionOccured();
+		void UpdateRightCollsionState(bool value);
 
 		void OnCollision(Paddle* player1, Paddle* player2);
 		void Update(Paddle* player1, Paddle* player2, Utility::TimeService* timeServices);

@@ -29,6 +29,8 @@ namespace GamePlay {
 
 	public :
 		GameplayManager(Events::EventManager* eventManager);
+		void UpdateScore();
+		void ResetPlayer();
 		void Update();
 		void Render(sf::RenderWindow* gameWindow);
 	};

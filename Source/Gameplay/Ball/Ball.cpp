@@ -89,12 +89,34 @@ namespace GamePlay
 
 		if (ballBound.left <= leftBoundary)
 		{
+			UpdateLeftCollsionState(true);
 			Reset();
 		}
 		else if (ballBound.left + ballBound.width >= rightBoundary)
 		{
+			UpdateRightCollsionState(true);
 			Reset();
 		}
+	}
+
+	bool Ball::IsLeftCollsionOccured()
+	{
+		return hadLeftCollison;
+	}
+
+	void Ball::UpdateLeftCollsionState(bool value)
+	{
+		hadLeftCollison = value;
+	}
+
+	bool Ball::IsRightCollsionOccured()
+	{
+		return hadRightCollison;
+	}
+
+	void Ball::UpdateRightCollsionState(bool value)
+	{
+		hadRightCollison = value;
 	}
 
 
