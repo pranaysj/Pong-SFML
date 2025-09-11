@@ -1,0 +1,37 @@
+#include "../../Header/Core/GameWindowManager.h"
+
+using namespace sf;
+
+namespace Core {
+	void GameWindowManager::Initialize()
+	{
+		gameWindow = new RenderWindow();
+		CreateGameWindow();
+	}
+
+	void GameWindowManager::CreateGameWindow()
+	{
+		gameWindow->create(VideoMode::getDesktopMode(), gameTitle, Style::Default);
+	}
+
+	RenderWindow* GameWindowManager::GetGameWindow()
+	{
+		return gameWindow;
+	}
+
+	bool GameWindowManager::IsGameRunning()
+	{
+		return gameWindow->isOpen();
+	}
+
+	void GameWindowManager::ClearGameWindow()
+	{
+		gameWindow->clear(Color(0, 0, 0, 255));
+	}
+
+	void GameWindowManager::DisplayGameWindow()
+	{
+		gameWindow->display();
+	}
+}
+
