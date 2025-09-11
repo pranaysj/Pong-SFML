@@ -134,6 +134,38 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Source\Core\GameLoop.cpp" />
+    <ClCompile Include="Source\Core\GameWindowManager.cpp" />
+    <ClCompile Include="Source\Event\EventManager.cpp" />
+    <ClCompile Include="Source\Gameplay\Ball\Ball.cpp" />
+    <ClCompile Include="Source\Gameplay\GamePlayManager.cpp" />
+    <ClCompile Include="Source\Gameplay\Paddle\Paddle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="README.md" />
+    <None Include="SFML\place your include and lib folders here" />
+    <None Include="x64\Debug\openal32.dll" />
+    <None Include="x64\Debug\Pong-SFML.exe" />
+    <None Include="x64\Debug\Pong-SFML.pdb" />
+    <None Include="x64\Debug\sfml-audio-d-2.dll" />
+    <None Include="x64\Debug\sfml-graphics-d-2.dll" />
+    <None Include="x64\Debug\sfml-network-d-2.dll" />
+    <None Include="x64\Debug\sfml-system-d-2.dll" />
+    <None Include="x64\Debug\sfml-window-d-2.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Header\Core\GameLoop.h" />
+    <ClInclude Include="Header\Core\GameWindowManager.h" />
+    <ClInclude Include="Header\Event\EventManager.h" />
+    <ClInclude Include="Header\Gameplay\Ball\Ball.h" />
+    <ClInclude Include="Header\Gameplay\GamePlayManager.h" />
+    <ClInclude Include="Header\Gameplay\Paddle\Paddle.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Textures\Ball.png" />
+    <Image Include="Assets\Textures\HorizontalLine.png" />
+    <Image Include="Assets\Textures\Paddle.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
